@@ -20,4 +20,9 @@ public class PostService {
         return postRepository.findAll();
     }
 
+    public Post getSinglePost(long id)
+    {
+        return postRepository.findById(id)
+                .orElseThrow();
+    }
 }
