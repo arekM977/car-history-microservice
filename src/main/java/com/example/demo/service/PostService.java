@@ -17,7 +17,7 @@ public class PostService {
 
     public List<Post> getPosts()
     {
-        return postRepository.findAll();
+        return postRepository.findAllPosts();
     }
 
     public Post getSinglePost(long id)
