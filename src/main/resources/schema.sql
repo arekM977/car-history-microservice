@@ -1,5 +1,5 @@
 CREATE TABLE POST (
-    id   INTEGER      NOT NULL AUTO_INCREMENT,
+    id LONG NOT NULL AUTO_INCREMENT,
     title VARCHAR(400),
     content VARCHAR(2000),
     created timestamp,
@@ -7,8 +7,8 @@ CREATE TABLE POST (
 );
 
 CREATE TABLE COMMENT (
-    id   INTEGER      NOT NULL AUTO_INCREMENT,
-    post_id INTEGER NOT NULL,
+    id LONG NOT NULL AUTO_INCREMENT,
+    post_id LONG NOT NULL,
     content VARCHAR(2000) NULL,
     created timestamp,
     PRIMARY KEY (id)
