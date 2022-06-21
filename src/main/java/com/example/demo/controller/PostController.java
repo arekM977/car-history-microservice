@@ -6,6 +6,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.persistence.OneToMany;
 import java.util.List;
 
 @RestController
@@ -30,5 +31,17 @@ public class PostController {
     @PostMapping("/posts")
     public Post addPost(@RequestBody Post post) {
         return postService.addPost(post);
+    }
+
+    @PutMapping("/posts")
+    public Post editPost(@RequestBody Post post)
+    {
+        return postService.editPost(post);
+    }
+
+    @DeleteMapping("/posts/{id}")
+    public void deletePost(@PathVariable long id)
+    {
+        postService.deletePost(id);
     }
 }
