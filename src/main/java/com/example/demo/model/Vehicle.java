@@ -16,9 +16,9 @@ public class Vehicle {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    private String title;
-    private String content;
-    private LocalDateTime created;
+    private String make;
+    private String model;
+    private String vin;
 
     //relationship
     @OneToMany(cascade = CascadeType.REMOVE)

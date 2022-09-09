@@ -18,7 +18,7 @@ public class Accident {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private long vehicle_id;
-    private String content;
-    private LocalDateTime created;
+    private String description;
+    private LocalDateTime date_of_accident;
 
 }

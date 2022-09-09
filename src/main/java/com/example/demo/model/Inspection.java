@@ -18,7 +18,7 @@ public class Inspection {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private long vehicle_id;
-    private String content;
-    private LocalDateTime created;
+    private String error_description;
+    private LocalDateTime date_of_inspection;
 
 }

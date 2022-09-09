@@ -33,8 +33,8 @@ public class VehicleService {
     @Transactional
     public Vehicle editVehicle(Vehicle vehicle) {
        Vehicle vehicleEdited =  vehicleRepository.findById(vehicle.getId()).orElseThrow();
-       vehicleEdited.setTitle(vehicle.getTitle());
-       vehicleEdited.setContent(vehicle.getContent());
+       vehicleEdited.setMake(vehicle.getMake());
+       vehicleEdited.setModel(vehicle.getModel());
 
        //hibernate sam sprawdza czy zmienione są pola encji dlatego nie potrzebne wywołanie metody postRepository.save(post)  - Mechanizm dirty Checking)
        return vehicleEdited;

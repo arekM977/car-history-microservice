@@ -18,7 +18,7 @@ public class Repair {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private long vehicle_id;
-    private String content;
-    private LocalDateTime created;
+    private String repair_description;
+    private LocalDateTime date_of_repair;
 
 }
